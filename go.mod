@@ -1,3 +1,3 @@
-module github.com/xushuhui/Algorithms
+module Algorithms
 
 go 1.12
