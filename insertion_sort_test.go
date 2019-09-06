@@ -1,8 +1,6 @@
 package main
 
 import (
-	"Algorithms/InsertionSort"
-	"Algorithms/SelectionSort"
 	"fmt"
 	"math/rand"
 	"testing"
@@ -34,9 +32,9 @@ func timeSpent(funcName string, inner func(arr []int), arr []int) {
 
 }
 func TestSort(t *testing.T) {
-	n := 100000
-	slice := generateRandomArray(n, 0, n)
-	timeSpent("SelectionSort", SelectionSort.Sort, slice)
-	slice2 := generateRandomArray(n, 0, n)
-	timeSpent("InsertionSort", InsertionSort.Sort, slice2)
+	//n := 100000
+	//slice := generateRandomArray(n, 0, n)
+	//timeSpent("SelectionSort", SelectionSort.Sort, slice)
+	//slice2 := generateRandomArray(n, 0, n)
+	//timeSpent("InsertionSort", InsertionSort.Sort, slice2)
 }
