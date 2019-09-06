@@ -1,6 +1,6 @@
 package main
 
-func Sort(arr []int) {
+func selection_sort(arr []int) {
 	n := len(arr)
 	for i := 0; i < n; i++ {
 		minIndex := i

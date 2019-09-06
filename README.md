@@ -1,4 +1,4 @@
-## Algorithms
+## algorithms
 
 - [x] 选择排序 [（SelectionSort）]
 - [ ] 插入排序 [（InsertionSort）]
