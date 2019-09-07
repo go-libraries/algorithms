@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) 2019 - xushuhui
+ * Author: xushuhui
+ * 微信公众号: 互联网工程师
+ * Email: xushuhui@qq.com
+ * 博客: https://www.phpst.cn
+ */
 package main
 
 import (
@@ -28,5 +35,8 @@ func timeSpent(funcName string, inner func(arr []int), arr []int) {
 	start := time.Now()
 	inner(arr)
 	fmt.Println(funcName+" time spent:", time.Since(start).Seconds())
+
+}
+func main(){
 
 }
