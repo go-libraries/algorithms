@@ -8,18 +8,37 @@
 package main
 
 func MergeSort(arr []int) {
-	n := len(arr)
-	sort(arr, 0, n-1)
+	mergesort(arr, 0, len(arr)-1)
 }
-func sort(arr []int, left, right int) {
+func mergesort(arr []int, left, right int) {
 	if left >= right {
 		return
 	}
 	mid := (left + right) / 2
-	sort(arr, left, mid)
-	sort(arr, mid+1, right)
+	mergesort(arr, left, mid)
+	mergesort(arr, mid+1, right)
 	merge(arr, left, mid, right)
 }
 func merge(arr []int, left, mid, right int) {
+	var tmp = make([]int, right-left+1)
+	copy(tmp, arr[left:right+2])
 
+	i := left
+	j := mid + 1
+
+	for k := left; k <= right; k++ {
+		if i > mid {
+			arr[k] = tmp[j-left]
+			j++
+		} else if j > right {
+			arr[k] = tmp[i-left]
+			i++
+		} else if tmp[i-left] < tmp[j-left] {
+			arr[k] = tmp[i-left]
+			i++
+		} else {
+			arr[k] = tmp[j-left]
+			j++
+		}
+	}
 }

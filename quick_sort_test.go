@@ -6,3 +6,11 @@
  * 博客: https://www.phpst.cn
  */
 package main
+
+import "testing"
+
+func TestQuickSort(t *testing.T) {
+	n := 1000000
+	slice := generateRandomArray(n, 0, n)
+	timeSpent("QuickSort", QuickSort, slice)
+}
