@@ -20,8 +20,8 @@ func mergesort(arr []int, left, right int) {
 	merge(arr, left, mid, right)
 }
 func merge(arr []int, left, mid, right int) {
-	var tmp = make([]int, right-left+1)
-	copy(tmp, arr[left:right+2])
+	var tmp = make([]int, right-left+2)
+	copy(tmp, arr[left:right+1])
 
 	i := left
 	j := mid + 1
