@@ -6,3 +6,11 @@
  * 博客: https://www.phpst.cn
  */
 package main
+
+import "testing"
+
+func TestShellSort(t *testing.T) {
+	n := 1000000
+	s1 := generateRandomArray(n, 0, n)
+	timeSpent("ShellSort", ShellSort, s1)
+}

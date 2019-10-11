@@ -34,9 +34,15 @@ func isSorted(arr []int) bool {
 func timeSpent(funcName string, inner func(arr []int), arr []int) {
 	start := time.Now()
 	inner(arr)
-	fmt.Println(funcName+" time spent:", time.Since(start).Seconds())
+	ts := time.Since(start).Seconds()
+	if !isSorted(arr) {
+		return
+	}
+	fmt.Println(funcName+" time spent:", ts)
 
 }
-func main(){
-
+func copyArray(arr []int, n int) []int {
+	var newArr = make([]int, n)
+	copy(newArr, arr)
+	return newArr
 }
